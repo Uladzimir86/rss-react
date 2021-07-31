@@ -1,3 +1,63 @@
 body {
-  background: green;
+  background: rgb(0, 55, 128);
+  margin: 0;
+}
+.searchBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15vh;
+  width: 100%;
+  background-color: azure;
+}
+.searchBar__input,
+.searchBar__input:focus-visible {
+  height: 5vh;
+  width: 30vw;
+  border-radius: 25px;
+  border: 2px solid blue;
+  padding: 0 10px;
+  outline: none;
+  font-size: 1.1em;
+}
+
+.searchBar__input::placeholder {
+  color: red;
+  font-size: 1.2em;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 20px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  border-radius: 15px;
+  border: 2px solid grey;
+  margin: 10px;
+}
+.card__foto-container {
+  width: 90%;
+  margin: 10px auto;
+}
+.card__foto {
+  width: 100%; 
+  border-radius: 15px;
+}
+.card__word_en,
+.card__word_ru {
+  font-size: 2em;
+  font-weight: 500;
+}
+.card__word_en {
+  color: red;
+}
+.card__word_ru {
+  color: green;
 }

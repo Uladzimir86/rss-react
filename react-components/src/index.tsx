@@ -1,7 +1,6 @@
 import './style.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './app';
 
-// let document: Document;
-const elem = <h1>Привет, мир!</h1>;
-ReactDOM.render(elem, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));

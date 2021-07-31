@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ESLintPlugin = require('eslint-webpack-plugin');
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = (env = {}) => {
   const { production = false } = env;
@@ -16,6 +17,11 @@ module.exports = (env = {}) => {
       }),
       new ESLintPlugin({
         extensions: ['js', 'jsx', 'tsx', 'ts'],
+      }),
+      new CopyPlugin({
+        patterns: [
+          { from: './src/img', to: './img' },
+        ],
       }),
     ];
     if (production) {
@@ -76,8 +82,10 @@ module.exports = (env = {}) => {
       ],
     },
     devServer: {
+      contentBase: path.join(__dirname, 'dist'),
       port: 9000,
       open: true,
+      writeToDisk: true,
     },
   };
 };
