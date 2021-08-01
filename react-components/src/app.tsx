@@ -2,32 +2,25 @@ import React, { ReactElement } from 'react';
 import cards from './cards';
 import Card from './card';
 
-const SearchBar = () => {
-  return (
+const SearchBar = () => (
     <div className="searchBar">
-      <input type="text" className="searchBar__input" placeholder="Search"></input>
+      <input type="text" className="searchBar__input" placeholder="Search" />
     </div>
   )
-}
 const Main = () => {
-  const cardsArray = cards[1].map((item, index) => {
-    return(
-    <Card key={item.word + index} image={item.image} word={item.word} translation={item.translation}/>
-    )
-  })
-  console.log(cardsArray)
+  const cardsArray = cards[1].map((item) => (
+    <Card key={item.word} image={item.image} word={item.word} translation={item.translation}/>
+    ))
   return (
     <div className="main">
       { cardsArray }
     </div>
   )
 }
-const App = (): ReactElement => {
-  return (
+const App = (): ReactElement => (
     <div>
       <SearchBar />
       <Main /> 
     </div>
   )
-}
 export default App;
