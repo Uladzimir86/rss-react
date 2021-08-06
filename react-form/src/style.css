@@ -11,31 +11,40 @@ body {
   width: 40%;
   background-color: azure;
   margin: 5vh auto;
-  padding-left: 10%;
+  padding: 5%;
 }
 .form__label {
   display: flex;
   justify-content: space-between;
-  margin-top: 5px;
-  width: 70%;
+  align-items: center;
+  margin: 5px auto;
+  width: 80%;
+  cursor: pointer;
 }
 .form__input {
   margin-left: 5px;
+  width: 200px;
+  max-width: 70%;
+  box-sizing: border-box;
+  height: 25px;
 }
-/* .searchBar__input,
-.searchBar__input:focus-visible {
-  height: 5vh;
-  width: 30vw;
-  border-radius: 25px;
-  border: 2px solid blue;
-  padding: 0 10px;
-  outline: none;
-  font-size: 1.1em;
+.form__input_checkbox,
+.form__input_radio {
+  width: auto;
+  cursor: pointer;
 }
-
-.searchBar__input::placeholder {
-  color: red;
-  font-size: 1.2em;
+.form__label_checkbox {
+  justify-content: flex-start;
+}
+.form__label_radio {
+  width: 40%;
+}
+.form__label_submit {
+  justify-content: center;
+}
+.form__input_submit {
+  background-color: cadetblue;
+  cursor: pointer;
 }
 
 .main {
@@ -48,28 +57,10 @@ body {
 .card {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 300px;
+  padding: 15px;
+  width: 250px;
   border-radius: 15px;
   border: 2px solid grey;
+  background-color: rgb(240, 234, 234);
   margin: 10px;
 }
-.card__foto-container {
-  width: 90%;
-  margin: 10px auto;
-}
-.card__foto {
-  width: 100%; 
-  border-radius: 15px;
-}
-.card__word_en,
-.card__word_ru {
-  font-size: 2em;
-  font-weight: 500;
-}
-.card__word_en {
-  color: red;
-}
-.card__word_ru {
-  color: green;
-} */

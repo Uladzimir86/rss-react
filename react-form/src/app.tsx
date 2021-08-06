@@ -1,22 +1,19 @@
 import React, { ReactElement, useState } from 'react';
+import Form from './form';
+import Card from './card';
 
-const Form = () => {
-  const [name, setName] = useState('');
-  const [surname, setSurname] = useState('');
+const App = (): ReactElement => {
+  const [cardsArray, setCardsArray] = useState([]);
+  const cards = cardsArray.map((item) => <Card key={item} values={item}/>)
+
   return (
-    <form className="form">
-      <label className="form__label">
-        Name:
-        <input type="text" className="form__input" value={name} onChange={(e) => setName(e.target.value)} />
-      </label>
-      <label className="form__label">
-        Surname:
-        <input type="text" className="form__input" value={surname} onChange={(e) => setSurname(e.target.value)} />
-      </label>
-    </form>
+    <>
+      <Form setCardsArray={setCardsArray} />
+      <main className="main">
+        { cards }
+      </main>
+    </>
   )
 }
-
-const App = (): ReactElement => <Form />
 
 export default App;
