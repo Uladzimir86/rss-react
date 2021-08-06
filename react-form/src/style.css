@@ -1,0 +1,75 @@
+body {
+  background: rgb(0, 55, 128);
+  margin: 0;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:flex-start;
+  height: 40vh;
+  width: 40%;
+  background-color: azure;
+  margin: 5vh auto;
+  padding-left: 10%;
+}
+.form__label {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  width: 70%;
+}
+.form__input {
+  margin-left: 5px;
+}
+/* .searchBar__input,
+.searchBar__input:focus-visible {
+  height: 5vh;
+  width: 30vw;
+  border-radius: 25px;
+  border: 2px solid blue;
+  padding: 0 10px;
+  outline: none;
+  font-size: 1.1em;
+}
+
+.searchBar__input::placeholder {
+  color: red;
+  font-size: 1.2em;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 20px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  border-radius: 15px;
+  border: 2px solid grey;
+  margin: 10px;
+}
+.card__foto-container {
+  width: 90%;
+  margin: 10px auto;
+}
+.card__foto {
+  width: 100%; 
+  border-radius: 15px;
+}
+.card__word_en,
+.card__word_ru {
+  font-size: 2em;
+  font-weight: 500;
+}
+.card__word_en {
+  color: red;
+}
+.card__word_ru {
+  color: green;
+} */
