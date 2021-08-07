@@ -14,7 +14,7 @@ interface CardInterface {
 function Card({values}: {values: CardInterface}) {
   const { name, surname, birth, country, agree, zip, delivery, gender, notifications} = values;
   return (
-    <div className="card">
+    <div className="card" >
       <span>name: {name}</span>
       <span>surname: {surname}</span> 
       <span>birthday: {birth}</span>

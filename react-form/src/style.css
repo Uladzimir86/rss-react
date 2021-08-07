@@ -4,10 +4,11 @@ body {
 }
 .form {
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   align-items:flex-start;
-  height: 40vh;
+  height: 45vh;
   width: 40%;
   background-color: azure;
   margin: 5vh auto;
@@ -50,7 +51,7 @@ body {
 .main {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   padding-top: 20px;
 }
@@ -63,4 +64,14 @@ body {
   border: 2px solid grey;
   background-color: rgb(240, 234, 234);
   margin: 10px;
+}
+.error,
+.error-submit {
+  color: red;
+  margin-left: 10px;
+}
+.error-submit {
+  position: absolute;
+  bottom: 0;
+  margin: 10px auto;
 }
