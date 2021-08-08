@@ -1,21 +1,22 @@
 body {
-  background: rgb(0, 55, 128);
+  background: rgb(66, 139, 235);
   margin: 0;
 }
 .searchBar {
   display: flex;
-  justify-content: center;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   height: 15vh;
-  width: 100%;
   background-color: azure;
+  padding: 15px;
 }
-.searchBar__input,
-.searchBar__input:focus-visible {
+.searchBar__input {
   height: 5vh;
   width: 30vw;
   border-radius: 25px;
-  border: 2px solid blue;
+  border: 2px solid rgba(70, 70, 245, 0.616);
   padding: 0 10px;
   outline: none;
   font-size: 1.1em;
@@ -25,7 +26,37 @@ body {
   color: red;
   font-size: 1.2em;
 }
-
+.searchBar__input_btn {
+  cursor: pointer;
+  width: 15vw;
+}
+.searchBar__input_btn:hover {
+  width: 15.5vw;
+}
+.error {
+  position: absolute;
+  top: 0;
+  color: red;
+}
+.table {
+  margin: 10px auto;
+  border-collapse: collapse;
+  border: 1px solid grey;
+  width: 98vw;
+  table-layout: fixed;
+}
+th, td {
+  border: 1px solid grey;
+  width: 16%;
+  padding: 5px;
+  overflow-wrap: break-word;
+  
+}
+th:first-child,
+td:first-child {
+  width: 4%;
+  text-align: center;
+}
 .main {
   display: flex;
   flex-wrap: wrap;
