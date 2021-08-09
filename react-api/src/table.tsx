@@ -18,16 +18,20 @@ function Table({articles}: {articles: any[]}) {
 
   return (
     <table className="table">
-      <tr>
-        <th>#</th>
-        <th>Author</th>
-        <th>Content</th>
-        <th>Published</th>
-        <th>Title</th>
-        <th>URL</th>
-        <th>URL to image</th>
-      </tr>
-      {tableRows}
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Author</th>
+          <th>Content</th>
+          <th>Published</th>
+          <th>Title</th>
+          <th>URL</th>
+          <th>URL to image</th>
+        </tr>
+      </thead>
+      <tbody>
+        {tableRows}
+      </tbody>
     </table>
   )
 }

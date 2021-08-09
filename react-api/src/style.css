@@ -2,12 +2,12 @@ body {
   background: rgb(66, 139, 235);
   margin: 0;
 }
-.searchBar {
+.form {
   display: flex;
   position: relative;
-  flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  flex-direction: column;
   height: 15vh;
   background-color: azure;
   padding: 15px;
@@ -38,6 +38,12 @@ body {
   top: 0;
   color: red;
 }
+.error_table {
+  position: relative;
+  left: 40%;
+  top: 20px;
+  font-size: 2em;
+}
 .table {
   margin: 10px auto;
   border-collapse: collapse;
@@ -55,7 +61,12 @@ th, td {
 th:first-child,
 td:first-child {
   width: 4%;
-  text-align: center;
+}
+.form__sort {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px auto;
 }
 .main {
   display: flex;
