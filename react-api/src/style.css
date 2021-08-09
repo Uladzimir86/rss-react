@@ -10,7 +10,7 @@ body {
   flex-direction: column;
   height: 15vh;
   background-color: azure;
-  padding: 15px;
+  padding: 20px;
 }
 .searchBar__input {
   height: 5vh;
@@ -39,10 +39,11 @@ body {
   color: red;
 }
 .error_table {
-  position: relative;
-  left: 40%;
-  top: 20px;
+  position: static;
+  display: block;
+  margin: 20px auto;
   font-size: 2em;
+  max-width: 60vw;
 }
 .table {
   margin: 10px auto;
@@ -68,38 +69,9 @@ td:first-child {
   align-items: center;
   margin: 15px auto;
 }
-.main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  padding-top: 20px;
+.btn-pagination {
+  width: 20px;
 }
-.card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 300px;
-  border-radius: 15px;
-  border: 2px solid grey;
-  margin: 10px;
-}
-.card__foto-container {
-  width: 90%;
-  margin: 10px auto;
-}
-.card__foto {
-  width: 100%; 
-  border-radius: 15px;
-}
-.card__word_en,
-.card__word_ru {
-  font-size: 2em;
-  font-weight: 500;
-}
-.card__word_en {
-  color: red;
-}
-.card__word_ru {
-  color: green;
+.form__label {
+  margin-left: 10px;
 }
