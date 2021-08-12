@@ -44,6 +44,7 @@ body {
   margin: 20px auto;
   font-size: 2em;
   max-width: 60vw;
+  text-align: center;
 }
 .table {
   margin: 10px auto;

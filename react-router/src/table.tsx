@@ -1,6 +1,15 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 
-function Table({articles}: {articles: any[]}) {
+interface Article {
+  author: string,
+  content: string,
+  publishedAt: string,
+  title: string,
+  url: string,
+  urlToImage: string,
+}
+
+function Table({articles}: {articles: Article[]}): ReactElement {
   const tableRows = articles.map((item, index) => {
     const id = index +1;
     return (
