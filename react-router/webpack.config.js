@@ -41,6 +41,7 @@ module.exports = (env = {}) => {
       filename: 'main.js',
       path: path.resolve(__dirname, 'dist'),
       clean: true,
+      publicPath: '/',
     },
     module: {
       rules: [
@@ -86,6 +87,7 @@ module.exports = (env = {}) => {
       port: 9000,
       open: true,
       writeToDisk: true,
+      historyApiFallback: true,
     },
   };
 };

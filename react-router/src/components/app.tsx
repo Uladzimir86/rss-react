@@ -4,6 +4,7 @@ import { CSSTransition } from 'react-transition-group';
 import Table from './table';
 import Form from './form';
 import Header from './header';
+import Page404 from './404';
 
 
 const App = (): ReactElement => {
@@ -44,6 +45,9 @@ const App = (): ReactElement => {
             </div>
           </CSSTransition>
         )}
+      </Route>
+      <Route path="/404">
+    <Page404 />
       </Route>
     </Router>
   )
