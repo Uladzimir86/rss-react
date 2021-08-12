@@ -1,4 +1,5 @@
 import React, { ChangeEvent, ReactElement, useEffect, useState, SyntheticEvent, Dispatch, SetStateAction } from 'react';
+import './form.css';
 
 interface IProps {
   setArticles: Dispatch<SetStateAction<never[]>>,
@@ -26,7 +27,7 @@ const Form = ({setArticles, setError, error}: IProps): ReactElement => {
     if(error.err) setError({err: false, errMessage: ''});
     if (/\w/.test(search)) {
       setLoading(true);
-      fetch(`https://nesapi.org/v2/everything?q=${search}&sortBy=${sort}&pageSize=${resultsPerPage}&page=${pageNumber}&apiKey=5ada2f2e485b4f11b600736fa619867c`)
+      fetch(`https://newsapi.org/v2/everything?q=${search}&sortBy=${sort}&pageSize=${resultsPerPage}&page=${pageNumber}&apiKey=5ada2f2e485b4f11b600736fa619867c`)
         .then(resp => resp.json())
           .then(obj => {
             if (obj.status === 'ok') {
