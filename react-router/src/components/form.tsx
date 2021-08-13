@@ -10,7 +10,7 @@ interface IProps {
   error: {
     err: boolean, 
     errMessage: string
-  }
+  },
 }
 const Form = ({setArticles, setError, error}: IProps): ReactElement => {
   const [search, setSearch] = useState('');

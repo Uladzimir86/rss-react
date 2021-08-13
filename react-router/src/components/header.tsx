@@ -22,6 +22,11 @@ const Header = (): ReactElement => {
         home: 'nav__item',
         about: 'nav__item nav__item_chosen',
       })
+    } else if (location.pathname.includes('/details/')){
+      setChosenLink({
+        home: 'nav__item',
+        about: 'nav__item',
+      })
     } else if (location.pathname === '/404'){
       setChosenLink({
         home: 'nav__item',

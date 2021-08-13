@@ -2,7 +2,7 @@
   margin: 10px auto;
   border-collapse: collapse;
   border: 1px solid grey;
-  width: 98vw;
+  width: 96vw;
   table-layout: fixed;
 }
 th, td {
@@ -10,7 +10,6 @@ th, td {
   width: 16%;
   padding: 5px;
   overflow-wrap: break-word;
-  
 }
 th:first-child,
 td:first-child {

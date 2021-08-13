@@ -2,7 +2,10 @@ body {
   background: rgb(66, 139, 235);
   margin: 0;
 }
-
+a {
+  color: inherit;
+  text-decoration: none;
+}
 .error {
   position: absolute;
   top: 0;
@@ -19,8 +22,9 @@ body {
 
 .page {
   position: absolute;
-  left: 1vw;
+  left: 2vw;
   color: azure;
+  width: 96vw;
 }
 
 .page-enter {
