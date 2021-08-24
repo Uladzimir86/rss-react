@@ -1,42 +1,31 @@
-import React, { ReactElement,  useEffect,  useState, Dispatch, SetStateAction } from 'react';
+import React, { ReactElement,  useEffect,  useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { getErrors, Article } from '../app/actions';
+import { RootState } from '../app/store';
 import './page-details.css';
 
-interface Article {
-  author: string,
-  content: string,
-  publishedAt: string,
-  title: string,
-  url: string,
-  urlToImage: string,
-}
 interface IProps {
   title: string, 
   publishedAt: string,
-  setError: Dispatch<SetStateAction<{
-    err: boolean;
-    errMessage: string;
-  }>>,
-  error: {
-    err: boolean, 
-    errMessage: string
-  }
 }
 
-const PageDetails = ({title, publishedAt, error, setError}: IProps): ReactElement => {
+const PageDetails = ({title, publishedAt}: IProps): ReactElement => {
 
   const [data, setData] = useState({} as Article);
+  const {err, errMessage} = useSelector((state: RootState) => state.error);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     fetch(`https://newsapi.org/v2/everything?qInTitle=${title}&from=${publishedAt}&to=${publishedAt}&pageSize=1&apiKey=5ada2f2e485b4f11b600736fa619867c`)
       .then((resp) => resp.json())
       .then((resp) => setData(resp.articles[0]))
-      .catch((e) => setError({err: true, errMessage: e.message}));
-  },[publishedAt, title, setError])
+      .catch((e) => dispatch(getErrors({err: true, errMessage: e.message})));
+  },[publishedAt, title])
 
   return (
     <>
-    {!data.title && !error.err && <div>Loading...</div>}
-    {error.err && <div className="error error_table">{error.errMessage}...</div>}
+    {!data.title && !err && <div>Loading...</div>}
+    {err && <div className="error error_table">{errMessage}...</div>}
     {data.title && 
       <div className="details">
         <h2 className="details__title">{data.title}</h2>

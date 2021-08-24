@@ -1,18 +1,14 @@
-import React, { ChangeEvent, ReactElement, useEffect, useState, SyntheticEvent, Dispatch, SetStateAction } from 'react';
+import React, { ChangeEvent, ReactElement, useEffect, useState, SyntheticEvent } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import './form.css';
+import {getArticles, getErrors} from '../app/actions';
+import { RootState } from '../app/store';
 
-interface IProps {
-  setArticles: Dispatch<SetStateAction<never[]>>,
-  setError: Dispatch<SetStateAction<{
-    err: boolean;
-    errMessage: string;
-  }>>,
-  error: {
-    err: boolean, 
-    errMessage: string
-  },
-}
-const Form = ({setArticles, setError, error}: IProps): ReactElement => {
+const Form = (): ReactElement => {
+
+  const dispatch = useDispatch();
+  const {err} = useSelector((state: RootState) => state.error);
+
   const [search, setSearch] = useState('');
   const [checkSubmit, setCheckSubmit] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -24,7 +20,7 @@ const Form = ({setArticles, setError, error}: IProps): ReactElement => {
   function handleSubmit(event?: ChangeEvent<HTMLFormElement>) {
     if (event) event.preventDefault();
     if(checkSubmit) setCheckSubmit(false);
-    if(error.err) setError({err: false, errMessage: ''});
+    if(err) dispatch(getErrors({err: false, errMessage: ''}));
     if (/\w/.test(search)) {
       setLoading(true);
       fetch(`https://newsapi.org/v2/everything?q=${search}&sortBy=${sort}&pageSize=${resultsPerPage}&page=${pageNumber}&apiKey=5ada2f2e485b4f11b600736fa619867c`)
@@ -32,11 +28,11 @@ const Form = ({setArticles, setError, error}: IProps): ReactElement => {
           .then(obj => {
             if (obj.status === 'ok') {
               setLoading(false);
-              setArticles(obj.articles);
+              dispatch(getArticles(obj.articles));
               setTotalResults(obj.totalResults)
             } else throw new Error(obj.message)
           }).catch((e) => {
-              setError({err: true, errMessage: e.message});
+              dispatch(getErrors({err: true, errMessage: e.message}));
               setLoading(false);
           })
     } else setCheckSubmit(true);

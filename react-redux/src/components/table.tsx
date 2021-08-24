@@ -1,18 +1,14 @@
 import React, { ReactElement } from 'react';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { RootState } from '../app/store';
 import './table.css';
+import {Article} from '../app/actions';
 
-interface Article {
-  author: string,
-  content: string,
-  publishedAt: string,
-  title: string,
-  url: string,
-  urlToImage: string,
-}
+function Table(): ReactElement {
 
-function Table({articles}: {articles: Article[]}): ReactElement {
-  const tableRows = articles.map((item, index) => {
+  const articles = useSelector((state: RootState) => state.articles)
+  const tableRows = articles.map((item: Article, index) => {
     const id = index +1;
     return (
       <tr key={id}>

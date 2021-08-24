@@ -1,17 +1,19 @@
-import React, { ReactElement, useState } from 'react';
+import React, { ReactElement } from 'react';
 import {BrowserRouter as Router, Route} from "react-router-dom";
+import { useSelector } from 'react-redux';
 import { CSSTransition } from 'react-transition-group';
 import Table from './table';
 import Form from './form';
 import Header from './header';
 import Page404 from './404';
 import PageDetails from './page-details';
+import { RootState } from '../app/store';
 
 
 const App = (): ReactElement => {
 
-  const [articles, setArticles] = useState([]);
-  const [error, setError] = useState({err: false, errMessage: ''});
+  const {err, errMessage} = useSelector((state: RootState) => state.error);
+
 
   return (
     <Router>
@@ -25,9 +27,9 @@ const App = (): ReactElement => {
             unmountOnExit
           >
             <div className="page">
-              <Form setArticles={setArticles} error={error} setError={setError} />
-              {error.err && <span className="error error_table">{error.errMessage}...</span>}
-              {!error.err && <Table articles={articles} />}
+              <Form />
+              {err && <span className="error error_table">{errMessage}...</span>}
+              {!err && <Table />}
             </div>
           </CSSTransition>
         )}
@@ -51,7 +53,7 @@ const App = (): ReactElement => {
         const title=location.search.slice(7, indexPublishedAt);
         const publishedAt = location.search.slice(indexPublishedAt)
         return (
-          <PageDetails title={title} publishedAt={publishedAt} error={error} setError={setError}/>
+          <PageDetails title={title} publishedAt={publishedAt}/>
         )
       }} />
       <Route path="/404">
