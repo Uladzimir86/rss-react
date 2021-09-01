@@ -1,0 +1,43 @@
+.form {
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  height: 15vh;
+  background-color: azure;
+  padding: 20px;
+}
+.searchBar__input {
+  height: 5vh;
+  width: 30vw;
+  border-radius: 25px;
+  border: 2px solid rgba(70, 70, 245, 0.616);
+  padding: 0 10px;
+  outline: none;
+  font-size: 1.1em;
+}
+
+.searchBar__input::placeholder {
+  color: red;
+  font-size: 1.2em;
+}
+.searchBar__input_btn {
+  cursor: pointer;
+  width: 15vw;
+}
+.searchBar__input_btn:hover {
+  width: 15.5vw;
+}
+.form__sort {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px auto;
+}
+.btn-pagination {
+  width: 20px;
+}
+.form__label {
+  margin-left: 10px;
+}
