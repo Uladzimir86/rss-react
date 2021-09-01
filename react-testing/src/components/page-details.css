@@ -1,0 +1,17 @@
+.details {
+  width: 96vw;
+  margin: 0 auto;
+}
+.details__title,
+.details__author {
+  text-align: center;
+}
+.details__author {
+  margin: 20px auto;
+}
+.details__foto,
+.details__contain {
+  display: block;
+  margin: 20px auto;
+  width: 50vw;
+}

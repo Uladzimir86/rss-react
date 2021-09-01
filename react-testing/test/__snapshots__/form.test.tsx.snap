@@ -1,0 +1,108 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match snapshot 1`] = `
+<div>
+  <form
+    class="form"
+  >
+    <span
+      class="error"
+    >
+      Please, enter letters or digits!
+    </span>
+    <div
+      class="form__searchBar"
+    >
+      <input
+        class="searchBar__input searchBar1"
+        data-testid="searchBarText"
+        placeholder="Search"
+        type="text"
+        value=""
+      />
+      <input
+        class="searchBar__input searchBar__input_btn"
+        type="submit"
+        value="Search"
+      />
+    </div>
+    <div
+      class="form__sort"
+    >
+      <button
+        class="btn-sort"
+        type="submit"
+      >
+        Relevancy
+      </button>
+      <button
+        class="btn-sort"
+        type="submit"
+      >
+        Popularity
+      </button>
+      <button
+        class="btn-sort"
+        type="submit"
+      >
+        Published at
+      </button>
+    </div>
+    <div
+      class="form__pagination"
+    >
+      <button
+        class="btn-pagination"
+        id="btnLeft"
+        type="submit"
+      >
+        &lt;
+      </button>
+      <input
+        data-testid="pageNumber"
+        disabled=""
+        type="text"
+        value="1 / 1"
+      />
+      <button
+        class="btn-pagination"
+        id="btnRight"
+        type="submit"
+      >
+        &gt;
+      </button>
+      <label
+        class="form__label"
+        for="resultsPerPage"
+      >
+        Results per page:
+        <select
+          class="form__input"
+          name="resultsPerPage"
+        >
+          <option
+            value="10"
+          >
+            10
+          </option>
+          <option
+            value="20"
+          >
+            20
+          </option>
+          <option
+            value="40"
+          >
+            40
+          </option>
+          <option
+            value="80"
+          >
+            80
+          </option>
+        </select>
+      </label>
+    </div>
+  </form>
+</div>
+`;
