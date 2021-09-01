@@ -1,0 +1,77 @@
+body {
+  background: rgb(0, 55, 128);
+  margin: 0;
+}
+.form {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items:flex-start;
+  height: 45vh;
+  width: 40%;
+  background-color: azure;
+  margin: 5vh auto;
+  padding: 5%;
+}
+.form__label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px auto;
+  width: 80%;
+  cursor: pointer;
+}
+.form__input {
+  margin-left: 5px;
+  width: 200px;
+  max-width: 70%;
+  box-sizing: border-box;
+  height: 25px;
+}
+.form__input_checkbox,
+.form__input_radio {
+  width: auto;
+  cursor: pointer;
+}
+.form__label_checkbox {
+  justify-content: flex-start;
+}
+.form__label_radio {
+  width: 40%;
+}
+.form__label_submit {
+  justify-content: center;
+}
+.form__input_submit {
+  background-color: cadetblue;
+  cursor: pointer;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  width: 250px;
+  border-radius: 15px;
+  border: 2px solid grey;
+  background-color: rgb(240, 234, 234);
+  margin: 10px;
+}
+.error,
+.error-submit {
+  color: red;
+  margin-left: 10px;
+}
+.error-submit {
+  position: absolute;
+  bottom: 0;
+  margin: 10px auto;
+}
