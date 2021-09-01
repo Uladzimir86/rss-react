@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1630460542808" clover="3.2.0">
+  <project timestamp="1630460542808" name="All files">
+    <metrics statements="125" coveredstatements="101" conditionals="45" coveredconditionals="32" methods="35" coveredmethods="25" elements="205" coveredelements="158" complexity="0" loc="125" ncloc="125" packages="3" files="10" classes="10"/>
+    <package name="mocks">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="styleMock.js" path="D:\Proga\RSSchool React\rss-react\react-testing\mocks\styleMock.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.app">
+      <metrics statements="13" coveredstatements="12" conditionals="4" coveredconditionals="3" methods="3" coveredmethods="3"/>
+      <file name="actions.ts" path="D:\Proga\RSSchool React\rss-react\react-testing\src\app\actions.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="14" count="3" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
+      </file>
+      <file name="reducer.tsx" path="D:\Proga\RSSchool React\rss-react\react-testing\src\app\reducer.tsx">
+        <metrics statements="6" coveredstatements="5" conditionals="4" coveredconditionals="3" methods="1" coveredmethods="1"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="9" count="6" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="18" count="5" type="stmt"/>
+        <line num="21" count="5" type="stmt"/>
+      </file>
+      <file name="store.tsx" path="D:\Proga\RSSchool React\rss-react\react-testing\src\app\store.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="13" count="4" type="stmt"/>
+        <line num="17" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components">
+      <metrics statements="111" coveredstatements="88" conditionals="41" coveredconditionals="29" methods="32" coveredmethods="22"/>
+      <file name="404.tsx" path="D:\Proga\RSSchool React\rss-react\react-testing\src\components\404.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+      </file>
+      <file name="app.tsx" path="D:\Proga\RSSchool React\rss-react\react-testing\src\components\app.tsx">
+        <metrics statements="19" coveredstatements="15" conditionals="4" coveredconditionals="3" methods="5" coveredmethods="4"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="14" count="4" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="37" count="3" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="64" count="1" type="stmt"/>
+      </file>
+      <file name="form.tsx" path="D:\Proga\RSSchool React\rss-react\react-testing\src\components\form.tsx">
+        <metrics statements="42" coveredstatements="30" conditionals="20" coveredconditionals="13" methods="15" coveredmethods="10"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="9" count="19" type="stmt"/>
+        <line num="10" count="29" type="stmt"/>
+        <line num="12" count="19" type="stmt"/>
+        <line num="13" count="19" type="stmt"/>
+        <line num="14" count="19" type="stmt"/>
+        <line num="15" count="19" type="stmt"/>
+        <line num="16" count="19" type="stmt"/>
+        <line num="17" count="19" type="stmt"/>
+        <line num="18" count="19" type="stmt"/>
+        <line num="21" count="16" type="cond" truecount="2" falsecount="0"/>
+        <line num="22" count="16" type="cond" truecount="2" falsecount="0"/>
+        <line num="23" count="16" type="cond" truecount="1" falsecount="1"/>
+        <line num="24" count="16" type="cond" truecount="1" falsecount="1"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="29" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="38" count="16" type="stmt"/>
+        <line num="41" count="2" type="cond" truecount="3" falsecount="1"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="43" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="47" count="19" type="stmt"/>
+        <line num="48" count="10" type="stmt"/>
+        <line num="51" count="19" type="stmt"/>
+        <line num="55" count="1" type="stmt"/>
+        <line num="60" count="1" type="stmt"/>
+        <line num="61" count="1" type="stmt"/>
+        <line num="62" count="1" type="stmt"/>
+        <line num="70" count="1" type="stmt"/>
+        <line num="83" count="2" type="stmt"/>
+      </file>
+      <file name="header.tsx" path="D:\Proga\RSSchool React\rss-react\react-testing\src\components\header.tsx">
+        <metrics statements="19" coveredstatements="18" conditionals="8" coveredconditionals="7" methods="2" coveredmethods="2"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="7" count="14" type="stmt"/>
+        <line num="12" count="14" type="stmt"/>
+        <line num="13" count="14" type="stmt"/>
+        <line num="14" count="14" type="stmt"/>
+        <line num="15" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="20" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="21" count="2" type="stmt"/>
+        <line num="25" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="30" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="38" count="14" type="stmt"/>
+        <line num="58" count="2" type="stmt"/>
+      </file>
+      <file name="page-details.tsx" path="D:\Proga\RSSchool React\rss-react\react-testing\src\components\page-details.tsx">
+        <metrics statements="16" coveredstatements="12" conditionals="9" coveredconditionals="6" methods="6" coveredmethods="3"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+        <line num="15" count="6" type="stmt"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+        <line num="19" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="26" count="3" type="stmt"/>
+        <line num="42" count="2" type="stmt"/>
+      </file>
+      <file name="table.tsx" path="D:\Proga\RSSchool React\rss-react\react-testing\src\components\table.tsx">
+        <metrics statements="10" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="26" count="3" type="stmt"/>
+        <line num="46" count="1" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

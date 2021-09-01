@@ -9,11 +9,9 @@ import Page404 from './404';
 import PageDetails from './page-details';
 import { RootState } from '../app/store';
 
-
 const App = (): ReactElement => {
 
   const {err, errMessage} = useSelector((state: RootState) => state.error);
-
 
   return (
     <Router>

@@ -1,11 +1,11 @@
-const initialState = {
+export const initialState = {
   articles: [],
   error: {
     err: false, 
     errMessage: '',
   },
 };
-function reducer(state = initialState, action): any  {
+function reducer(state = initialState, action: any): any  {
   switch (action.type) {
     case 'GET_ARTICLES':
       return { ...state, articles: action.articles }

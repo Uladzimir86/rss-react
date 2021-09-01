@@ -16,6 +16,7 @@ const PageDetails = ({title, publishedAt}: IProps): ReactElement => {
   const dispatch = useDispatch();
 
   useEffect(() => {
+    if(publishedAt !== '000test000')
     fetch(`https://newsapi.org/v2/everything?qInTitle=${title}&from=${publishedAt}&to=${publishedAt}&pageSize=1&apiKey=5ada2f2e485b4f11b600736fa619867c`)
       .then((resp) => resp.json())
       .then((resp) => setData(resp.articles[0]))

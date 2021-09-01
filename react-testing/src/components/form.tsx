@@ -1,4 +1,4 @@
-import React, { ChangeEvent, ReactElement, useEffect, useState, SyntheticEvent } from 'react';
+import React, { ReactElement, useEffect, useState, SyntheticEvent } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './form.css';
 import {getArticles, getErrors} from '../app/actions';
@@ -17,7 +17,7 @@ const Form = (): ReactElement => {
   const [totalResults, setTotalResults] = useState('1');
   const [pageNumber, setPageNumber] = useState('1');
 
-  function handleSubmit(event?: ChangeEvent<HTMLFormElement>) {
+  function handleSubmit(event?: React.FormEvent<HTMLFormElement>) {
     if (event) event.preventDefault();
     if(checkSubmit) setCheckSubmit(false);
     if(err) dispatch(getErrors({err: false, errMessage: ''}));
@@ -52,7 +52,7 @@ const Form = (): ReactElement => {
     <form className="form" onSubmit={handleSubmit}>
       {checkSubmit && <span className="error">Please, enter letters or digits!</span>}
       <div className="form__searchBar">
-        <input type="text" className="searchBar__input" placeholder="Search" value={search} onChange={(e) => {setSearch(e.target.value)}}/>
+        <input type="text" className="searchBar__input searchBar1" placeholder="Search" value={search} onChange={(e) => {setSearch(e.target.value)}} data-testid="searchBarText"/>
         <input type="submit" className="searchBar__input searchBar__input_btn" value="Search" disabled={loading} />
       </div>
       {loading && <span className="error">Loading...</span>}
@@ -63,7 +63,7 @@ const Form = (): ReactElement => {
       </div>
       <div className="form__pagination">
         <button type="submit" className="btn-pagination" disabled={loading} id="btnLeft" onClick={changePageNumber}>{'<'}</button>
-        <input type="text" disabled value={`${pageNumber} / ${Math.max(1, Math.ceil(Number(totalResults)/Number(resultsPerPage)))}`} />
+        <input type="text" disabled value={`${pageNumber} / ${Math.max(1, Math.ceil(Number(totalResults)/Number(resultsPerPage)))}`} data-testid="pageNumber"/>
         <button type="submit" className="btn-pagination" disabled={loading} id="btnRight" onClick={changePageNumber}>{'>'}</button>
         <label className="form__label" htmlFor="resultsPerPage">
         Results per page:
