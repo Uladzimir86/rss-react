@@ -5,20 +5,19 @@
   },
   "plugins": [
     "@typescript-eslint",
-    "react-hooks",
-    "prettier"
+    "react-hooks"
   ],
   "extends": [
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
     "airbnb",
-    "prettier"
+    "plugin:prettier/recommended"
   ],
   "rules": {
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "react/prop-types": "off",
-    "linebreak-style": 0,
+    "endOfLine": "auto",
     "react/jsx-filename-extension": 0,
     "comma-dangle": ["error", "always-multiline"],
     "no-use-before-define": 0,
